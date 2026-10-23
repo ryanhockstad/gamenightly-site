@@ -1,0 +1,5 @@
+# Site-wide settings. GitHub Pages builds this site with Jekyll, which fills them into the pages.
+
+# Where questions and data-deletion requests go (shown on the privacy and terms pages).
+# While empty, the pages show a highlighted TODO; once set, it's a mailto link everywhere.
+contact_email: "jogugameapp@gmail.com"

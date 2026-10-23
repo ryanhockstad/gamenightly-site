@@ -1,0 +1,5 @@
+{%- if site.contact_email != "" -%}
+<a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>
+{%- else -%}
+<span class="todo">[CONTACT EMAIL — TODO]</span>
+{%- endif -%}
