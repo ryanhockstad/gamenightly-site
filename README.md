@@ -51,6 +51,5 @@ done
 
 ## Open TODOs
 
-- Fill in `[STATE — TODO]` (governing law, in the terms).
 - Google usually wants the homepage on a domain you own and verify in Search Console. Plan to buy one (e.g. `gamenightly.app`) and point Pages at it before submitting for verification.
 - These policies were drafted from the code as of 2026-10-06. They aren't legal advice; have them reviewed before launch.
