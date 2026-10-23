@@ -2,18 +2,19 @@
 
 The public website for **GameNightly**: the homepage, Privacy Policy, Terms of Service and logo. Google needs these to verify the OAuth consent screen for the bot's Google Calendar access (see [ryanhockstad/gamenight](https://github.com/ryanhockstad/gamenight) issues #2–#6).
 
-Live: https://aaglidden.github.io/gamenightly-site/
+Live: https://ryanhockstad.github.io/gamenightly-site/
 
 | Page | URL |
 |---|---|
-| Homepage | https://aaglidden.github.io/gamenightly-site/ |
-| Privacy Policy | https://aaglidden.github.io/gamenightly-site/privacy.html |
-| Terms of Service | https://aaglidden.github.io/gamenightly-site/terms.html |
+| Homepage | https://ryanhockstad.github.io/gamenightly-site/ |
+| Privacy Policy | https://ryanhockstad.github.io/gamenightly-site/privacy.html |
+| Terms of Service | https://ryanhockstad.github.io/gamenightly-site/terms.html |
 | Logo for the consent screen (120×120 PNG) | `assets/logo-120.png` |
 
 ## Files
 
-- `index.html`, `privacy.html`, `terms.html`: plain HTML with no build step. The privacy and terms pages share one header and footer, so a nav change has to be made in both.
+- `index.html`, `privacy.html`, `terms.html`: plain HTML. The privacy and terms pages share one header and footer, so a nav change has to be made in both.
+- `_config.yml`: site-wide settings (the contact email). GitHub Pages runs Jekyll, which fills them into the privacy and terms pages through `_includes/` (that's why those two pages start with an empty `---` front matter).
 - `styles.css`: brand tokens copied from `Gamenightly/web/src/styles.css`, plus the legal-page styles.
 - `home.css`: homepage only (hero, scroll-driven core features, product cards). The homepage has its own header and footer.
 - `assets/logo.svg`: the master logo. `logo-120.png` (Google consent screen) and `logo-512.png` (Discord app icon / social) are exported from it.
@@ -31,7 +32,7 @@ The privacy policy and the Google Calendar card on the homepage describe exactly
 python3 -m http.server 8000
 ```
 
-Then open http://localhost:8000.
+Then open http://localhost:8000. This server doesn't run Jekyll, so the privacy and terms pages show the raw `{% include %}` tag where the contact email goes; the live site fills it in.
 
 ## Deploy
 
@@ -50,6 +51,6 @@ done
 
 ## Open TODOs
 
-- Fill in `[CONTACT EMAIL — TODO]` (all three pages) and `[STATE — TODO]` (terms).
+- Fill in `[STATE — TODO]` (governing law, in the terms).
 - Google usually wants the homepage on a domain you own and verify in Search Console. Plan to buy one (e.g. `gamenightly.app`) and point Pages at it before submitting for verification.
 - These policies were drafted from the code as of 2026-10-06. They aren't legal advice; have them reviewed before launch.

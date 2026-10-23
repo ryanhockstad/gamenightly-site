@@ -1,3 +1,6 @@
+---
+# Front matter (even empty) makes Jekyll fill in {% %} tags; see _config.yml.
+---
 <!doctype html>
 <html lang="en">
 <head>
@@ -67,7 +70,7 @@
     <p>These terms are governed by the laws of <span class="todo">[STATE — TODO]</span>, United States, not counting its conflict-of-law rules.</p>
 
     <h2>12. Contact</h2>
-    <p>Questions about these terms: <span class="todo">[CONTACT EMAIL — TODO]</span></p>
+    <p>Questions about these terms: {% include contact-email.html %}</p>
   </main>
 
   <footer class="site-footer">
